@@ -3,7 +3,7 @@ import { API_URL, LIMIT_PER_PAGE, Response } from '../const';
 export default async ( tag, page=1 ) => {
     let result = [];
     if ( tag.length ) {
-        const apiUrl = API_URL.replace ( '{Q}', tag ).replace ( '{OFFSET}', page*LIMIT_PER_PAGE );
+        const apiUrl = API_URL.replace ( '{Q}', tag ).replace ( '{OFFSET}', ( page-1 )*LIMIT_PER_PAGE );
         try {
             const response = await fetch ( apiUrl );
             if ( response.status === Response.OK ) {

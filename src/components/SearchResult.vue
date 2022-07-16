@@ -2,9 +2,9 @@
   <div class="container">
     <div class="columns is-multiline is-mobile is-centered">
       <div
-        v-for="img in images"
+        v-for="( img, idx ) in images"
         class="column is-one-quarter"
-        :key="img.id"
+        :key="`${img.id}${idx}`"
       >
         <Card
           v-if="img.type === 'gif'"

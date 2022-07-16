@@ -28,7 +28,7 @@
         <div class="control">
           <input
             v-model="password"
-            @input="clearError()"
+            @input="clearError([ 'password', 'passwordsNotMatch' ])"
             @keyup.enter="submit"
             class="input is-large mt-3"
             :class="{ 'is-danger': isError ( 'password' ) || isError ( 'passwordsNotMatch' )}"
@@ -190,7 +190,7 @@
       clearError ( fieldName ) {
         if ( fieldName ) {
           this.errors = this.errors.filter (
-            err => Array.isArray ( fieldName ) ? fieldName.includes ( err ) : err !== fieldName
+            err => Array.isArray ( fieldName ) ? !fieldName.includes ( err ) : err !== fieldName
           );
         }
         else {

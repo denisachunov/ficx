@@ -7,3 +7,5 @@ export const API_URL = `https://api.giphy.com/v1/gifs/search?q={Q}&limit=${LIMIT
 export const Response = {
     OK: 200
 }
+
+export const HISTORY_SIZE = 10;

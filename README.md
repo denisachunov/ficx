@@ -1,6 +1,6 @@
 # Ficx test application 
 
-This is a test application for appying to the frontend developer position in Ficx (https://ficx.com). It allows to search gif images through the GIPHY source (https://giphy.com) by a hashtag. Requires users to be signed up.
+This is a test application for appying the frontend developer position in Ficx (https://ficx.com). It allows to search gif images through the GIPHY source (https://giphy.com) by a hashtag. Requires users to be signed up.
 
 ## Getting Started
 
